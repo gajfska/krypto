@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <h3>Krypto</h3>
+
+      <form (ngSubmit)="onSubmit()" #f="ngForm">
+
+
+
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!f.valid">
+          Szukaj
+        </button>
+
+      </form>
+
+
+      <!--<div class="row">-->
+        <!--<div class="col-xs-12 col-md-6 col-md-offset-3">-->
+          <!--<p *ngIf="wirdArray.length < 1 && !isFetching">No data :(</p>-->
+          <!--<ul class="list-group" *ngIf="wirdArray.length >= 1 && !isFetching">-->
+            <!--<li class="list-group-item" *ngFor="let post of wirdArray">-->
+              <!--<p>Close: {{post[4]}}</p>-->
+              <!--<p>Close Time: {{post[6]}}</p>-->
+            <!--</li>-->
+          <!--</ul>-->
+          <!--<p *ngIf="isFetching">Loading...</p>-->
+        <!--</div>-->
+      <!--</div>-->
+
+
+
+
+      <!--<option [ngValue]="data" *ngFor="let data of chooseData">-->
+        <!--&lt;!&ndash;{{data.name}}</option>&ndash;&gt;-->
+
+      <!--<option value="low"> Low </option>-->
+      <!--<option value="close"> Close </option>-->
+      <!--<option value="volume"> Volume </option>-->
+      <!--<option value="closeTime"> Close Time </option>-->
+      <!--<option value="quoteAV"> Quote Asset Volume </option>-->
+      <!--<option value="numberOT"> Number Of Trades </option>-->
+      <!--<option value="takerBBAV"> Taker Buy Base Asset Volume </option>-->
+      <!--<option value="takerBQAV"> Taker Buy Quote Asset Volume </option>-->
+      <!--<option value="ignore"> Can Be Ignored </option>-->
+
+
+
+      <!--<div class="form-group">-->
+        <!--<label for="secret">Secret Questions</label>-->
+        <!--<select-->
+          <!--id="secret"-->
+          <!--class="form-control"-->
+          <!--[ngModel]="defoultData"-->
+          <!--name="secret">-->
+          <!--<option value="low"> Low </option>-->
+          <!--<option value="close"> Close </option>-->
+          <!--<option value="volume"> Volume </option>-->
+        <!--</select>-->
+      <!--</div>-->
+
+      <!--<hr>-->
+
+      <!--<div class="form-group">-->
+        <!--<textarea name="kryptodata"-->
+                  <!--rows="3"-->
+                  <!--class="form-control"-->
+                  <!--[(ngModel)]="answer">-->
+        <!--</textarea>-->
+      <!--</div>-->
+
+
+      <!--<div class="row" *ngIf="isFetching">-->
+        <!--<div class="col-xs-12">-->
+          <!--<h3>Your Data</h3>-->
+          <!--<p>Dta: {{chooseKrypto}}</p>-->
+          <!--<p>Inna Data: {{allData}}</p>-->
+          <!--<p>inne: {{wartosc}}</p>-->
+          <!--<textarea rows="4" class="form-control">{{ wirdArray }} </textarea>-->
+
+          <!--&lt;!&ndash;<h1 ng-repeat="x in records">{{x}}</h1>&ndash;&gt;-->
+
+          <!--<div [ngSwitch]="wartosc" *ngFor="let post of wirdArray">-->
+            <!--&lt;!&ndash;<textarea cols="30" rows="10" *ngSwitchCase=" 'low' ">{{post[4]}}</textarea>&ndash;&gt;-->
+            <!--&lt;!&ndash;<input type="text" *ngSwitchCase=" 'low' " [ngModel]="post[4]">&ndash;&gt;-->
+            <!--&lt;!&ndash;<p *ngSwitchCase=" 'low' "> {{ post[4] }}</p>&ndash;&gt;-->
+            <!--<p *ngSwitchCase="'close'"> {{ post[1] }}</p>-->
+            <!--<p *ngSwitchCase="3"> {{ post[10] }}</p>-->
+
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <hr>
+
+    </div>
+  </div>
+</div>
