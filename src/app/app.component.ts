@@ -33,41 +33,29 @@ export class AppComponent implements OnInit {
   allData = '';
   chooseKrypto = '';
   wartosc = '';
-  anotherArray: any[] = [];
+  anotherArray: Post[] = [];
 
 
   constructor(private http: HttpClient) {}
 
 
   ngOnInit() {
-    // this.fetchPost();
-  }
-
-  onFetchPost() {
-    // this.fetchPost();
+    this.fetchPost();
   }
 
   onSubmit() {
     this.isFetching = true;
-
-    this.http.get<Post[]>('http://www.json-generator.com/api/json/get/bVsKSuowXS')
-      .pipe(flatMap( data => {
-        return data;
-      }))
-      .subscribe(post => {
-        console.log(post);
-      });
+    this.fetchPost();
   }
 
-  // private fetchPost() {
-  //   this.isFetching = true;
-  //   this.http.get<Post[]>('http://www.json-generator.com/api/json/get/bVsKSuowXS?fbclid=IwAR2PUWieWtlWcM78aD_UdMpZoRz4dwSY0lb6XIn8oq2TNpmMK5q8H5Zc34Y')
-  //     .subscribe(posts => {
-  //       this.wirdArray = posts;
-  //       this.isFetching = false;
-  //       console.log(posts);
-  //     });
-  // }
+  private fetchPost() {
+      this.http.get<Post[]>('http://www.json-generator.com/api/json/get/bVsKSuowXS')
+          .subscribe(post => {
+              this.anotherArray = post;
+              console.log(this.anotherArray);
+          });
+  }
+
 //
 //   pipe(
 //     RxOp.map(samples => {
