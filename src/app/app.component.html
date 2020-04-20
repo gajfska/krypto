@@ -2,17 +2,24 @@
   <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
         <h3>Krypto</h3>
+      <hr>
 
-      <form (ngSubmit)="onSubmit()" #f="ngForm">
+      <form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
 
+        <div *ngFor="let data of Data; let i=index">
+          <label>
+            <input type="checkbox" [value]="data.value" (change)="onCheckboxChange($event)" />
+            {{data.name}}
+          </label>
+        </div>
 
+        <button class="btn btn-success" type="submit"> Submit </button>
+        <!--<input type="submit" value="Submit">-->
 
-        <button
-          class="btn btn-primary"
-          type="submit"
-          [disabled]="!f.valid">
-          Szukaj
-        </button>
+        <hr>
+
+        <textarea name="value" id="" cols="30" rows="10">{{form.value | json }}</textarea>
+
 
       </form>
 
@@ -22,11 +29,27 @@
           <textarea name="kryptodata"
           rows="10"
           class="form-control">
-            {{ anotherArray }}
+            {{ wirdArray }}
           </textarea>
         </div>
       </div>
 
+
+      <!--TUTUAJ KOMENTARZE-->
+      <!--#f="ngForm"-->
+      <!--type="submit"-->
+      <!--[disabled]="!f.valid"-->
+
+      <!--<form (ngSubmit)="onSubmit()">-->
+
+      <!--<br>-->
+      <!--<button-->
+      <!--class="btn btn-primary"-->
+      <!--type="submit">-->
+      <!--Szukaj-->
+      <!--</button>-->
+
+      <!--</form>-->
 
       <!--<div class="row">-->
         <!--<div class="col-xs-12 col-md-6 col-md-offset-3">-->
